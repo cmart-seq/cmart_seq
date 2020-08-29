@@ -1,0 +1,213 @@
+@charset "UTF-8";
+.arrowLink {
+  border: none;
+  transition: all 0.5s;
+  cursor: pointer;
+  text-decoration: none; }
+
+.arrowLink {
+  cursor: pointer;
+  transition: 0.5s; }
+
+.arrowLink:after {
+  content: ' »';
+  opacity: 0;
+  transition: 0.5s; }
+
+.arrowLink:hover {
+  padding-right: 0px;
+  padding-left: 8px; }
+
+.arrowLink:hover:after {
+  opacity: 1; }
+
+.fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/* setting the universal font*/
+* {
+  font-family: 'Raleway'; }
+
+/* grey linear gradient background*/
+body {
+  margin-left: 1rem;
+  background-image: -webkit-linear-gradient(90deg, white 0%, red 100%);
+  background-image: -moz-linear-gradient(90deg, white 0%, red 100%);
+  background-image: -o-linear-gradient(90deg, white 0%, red 100%);
+  background-image: linear-gradient(#C4C4C4, #FFFFFF); }
+
+/* arranging main content using flexbox*/
+#image-container {
+  height: auto;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  position: absolute; }
+
+img {
+  width: 300px;
+  height: auto;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  margin-top: 2rem; }
+
+#statement-intro-contact {
+  margin-left: 24rem; }
+
+#statement-intro-contact h1 {
+  position: relative;
+  font-size: 3rem;
+  margin-bottom: 0;
+  margin-top: 2.5rem;
+  color: #000000;
+  font-family: "Belleza";
+  max-width: 50rem; }
+
+#name-container {
+  max-width: 40rem;
+  display: flex;
+  overflow: visible;
+  padding-right: 0rem;
+  margin-right: 0rem; }
+
+#statement-intro-contact p {
+  margin-left: 2rem;
+  max-width: 35rem;
+  min-width: 35rem;
+  line-height: 150%;
+  margin-bottom: 0rem; }
+
+#statement-intro-contact #intro p {
+  font-size: 1.3rem; }
+
+#statement-intro-contact #external {
+  padding-left: 0rem;
+  margin-left: 4rem;
+  margin-top: 0rem; }
+
+/* styling social link list*/
+a.arrowLink {
+  color: #234D1E;
+  font-size: 1.3rem; }
+
+#link-list {
+  list-style-type: none;
+  width: 20rem;
+  padding-left: 0rem; }
+
+/* styling contact information*/
+#contact {
+  max-width: 37rem; }
+
+#contact-label {
+  font-family: 'Belleza';
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+
+#contact p {
+  margin-bottom: 2rem; }
+
+/* adding some interactivity to the intro paragraph links*/
+.intro-link {
+  color: #234D1E;
+  position: relative;
+  font-weight: bolder;
+  text-decoration: underline solid transparent;
+  transition: text-decoration 1s ease;
+  width: 100px; }
+
+.intro-link:hover {
+  text-decoration: underline solid  #234D1E; }
+
+/* adding some interactivity to the email link*/
+#email {
+  color: #234D1E;
+  position: relative;
+  text-decoration: none; }
+
+#email::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #234D1E;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms ease-in; }
+
+#email:hover::after {
+  transform: scaleX(1); }
+
+/*copyright styling*/
+#copyright {
+  margin-left: 2rem; }
+
+#copyright p {
+  font-family: "Belleza";
+  margin-top: 0rem;
+  margin-bottom: 0rem; }
+
+html {
+  height: 100%; }
+
+figcaption {
+  margin-top: 0.5rem;
+  margin-left: 1.5rem; }
+
+.species {
+  font-style: italic; }
+
+#bitmoji {
+  height: 7.5rem;
+  width: auto;
+  padding-top: 0rem;
+  margin-top: 0rem; }
+
+#bitmoji-container {
+  position: relative;
+  margin-left: 25rem;
+  margin-top: 0.05rem;
+  padding-top: 0rem;
+  z-index: -1;
+  display: none;
+  padding-right: 0rem;
+  margin-right: 0rem; }
+
+#name-container:hover > #bitmoji-container {
+  position: absolute;
+  display: inline; }

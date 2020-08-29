@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type= "text/css" href="./personal_index1_2.css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway|Belleza" rel="stylesheet" type="text/css">
+    <title>Carly Martin</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body class="fade-in">
+	<div class="fadeImg" id="image-container">
+		
+		<figure class = "bonsai">
+			<img class = "bonsai" src="../personal_round_2/site/IMG_0214.jpeg" alt="Foemina Juniper Bonsai">
+			<figcaption><span class="species">Foemina juniper </span>(Needle Juniper)</figcaption>
+		</figure>
+		
+		<figure class = "cactus" style="display:none;">
+			<img id = "cactus" src="../personal_round_2/site/IMG_0258.jpeg" alt="Pincushion Cactus">
+			<figcaption><span class="species"> Mammillaria </span>(Pincushion Cactus)</figcaption>
+		</figure>
+		
+		<figure class = "white-rose" style="display:none;">
+			<img id = "white-rose" src="../personal_round_2/site/IMG_0217.jpeg" alt="Dog Rose">	
+			<figcaption><span class="species">Rosa canina </span>(Dog Rose)</figcaption>
+		</figure>
+		
+		<figure class = "bird-of-paradise" style="display:none;">
+			<img id = "bird-of-paradise" src="../personal_round_2/site/IMG_0346.jpeg" alt="Bird of Paradise">	
+			<figcaption><span class="species">Strelitzia reginae </span>(Bird of Paradise)</figcaption>
+		</figure>
+		
+		<figure class = "red-aloe" style="display:none;">
+			<img id = "red-aloe" src="../personal_round_2/site/IMG_0539.jpeg" alt="Bird of Paradise">	
+			<figcaption><span class="species">Aloe Cameronii </span>(Red Aloe)</figcaption>
+		</figure>
+			
+   <div id = "statement-intro-contact">
+	   <div id= "name-container" class="hover-img">
+		   <h1 id="my-name">Carly Martin</h1>
+		   <span id = "bitmoji-container">
+			   <img id = "bitmoji" src="../personal_round_2/site/IMG_0149.png"/>
+		   </span>
+		</div>
+        <div id="intro">
+              <p>I’m a PhD student at <a class="intro-link" href="https://biology.mit.edu/" target="_blank"><span data-content="MIT Biology">MIT Biology</span></a> studying plant genomics and specialized metabolism in the <a class="intro-link" href="http://wenglab.wi.mit.edu/" target="_blank"><span data-content="Weng lab">Weng lab</span></a> at the <a class="intro-link" href="http://wi.mit.edu/" target="_blank"><span data-content="Whitehead Institute">Whitehead Institute</span></a> as an <a class="intro-link" href="https://www.nsfgrfp.org/" target="_blank"><span data-content="NSF">NSF</span></a> fellow. Previously, I worked on single-cell and spatial transcriptomics projects in the <a class="intro-link" href="https://macoskolab.com/" target="_blank"><span data-content="Macosko lab">Macosko lab</span></a> at the <a class="intro-link" href="https://www.broadinstitute.org/" target="_blank"> <span data-content="Broad Institute">Broad Institute.</span></a> I'm generally interested in -omics tools and integrative analysis for the rapid characterization of new genomes, with an eye toward sustainability applications.</p>
+		</div>
+	<div id= "external" class="container">
+			<ul id="link-list" class="feed">
+                <li class="feed__item">
+                    <a href="https://scholar.google.com/citations?user=5DolZmgAAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer" class="arrowLink">Google Scholar<i class="arrowLink__icon"></i></a>
+                </li>
+               <!-- <li class="feed__item">
+                    <a href="https://github.com/cmart-seq" target="_blank" rel="noreferrer" class="arrowLink">Github<i class="arrowLink__icon"></i></a>
+                </li> -->
+                <li class="feed__item">
+                    <a href="https://twitter.com/cmart_seq" target="_blank" rel="noreferrer" class="arrowLink">Twitter<i class="arrowLink__icon"></i></a>
+                </li>
+           	</ul>
+		</div>
+		<div id="contact">
+      		<h2 id="contact-label">Contact</h2>
+      		<p>If you want to discuss plant genomics, single-cell technologies, the urgent need to overhaul agricultural systems, or something else, please drop a line <a id="email" href="mailto:camart@wi.mit.edu">here</a>.
+			</p>
+		</div>
+		</div>
+	</div>
+  <!-- <nav role="navigation">
+          <div id="menuToggle">
+			  <div>
+				  <input type="checkbox" />
+            		<span></span>
+            		<span></span>
+            		<span></span>
+			  </div>
+			  <div>
+				 <ul id="menu">
+              		<a href="./personal_index1_proj.html"><li>Projects</li></a>
+              		<a href="./personal_index1_blog.html"><li>Blog</li></a>
+              		<a href="./personal_index1_seeds.html"><li>Seeds</li></a>
+            	 </ul>
+			  </div>
+    
+          </div>
+    </nav> -->
+	
+<script type="text/javascript" src="js/package/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$next = 1;			// fixed, please do not modfy;
+	$current = 0;		// fixed, please do not modfy;
+	$interval = 6000;	// You can set single picture show time;
+	$fadeTime = 1000;	// You can set fadeing-transition time;
+	$imgNum = 5;		// How many pictures do you have
+ 
+	$(document).ready(function(){
+		//NOTE : Div Wrapper should with css: relative;
+		//NOTE : img should with css: absolute;
+		//NOTE : img Width & Height can change by you;
+		$('.fadeImg').css('position','relative');
+		$('.fadeImg figure').css({'position':'absolute','width':'332px','height':'500px'});
+ 
+		nextFadeIn();
+	});
+ 
+	function nextFadeIn(){
+		//make image fade in and fade out at one time, without splash vsual;
+		$('.fadeImg figure').eq($current).delay($interval).fadeOut($fadeTime)
+		.end().eq($next).delay($interval).hide().fadeIn($fadeTime, nextFadeIn);
+		    
+		// if You have 5 images, then (eq) range is 0~4 
+		// so we should reset to 0 when value > 4; 
+		if($next < $imgNum-1){ $next++; } else { $next = 0;}
+		if($current < $imgNum-1){ $current++; } else { $current =0; }
+	};
+</script>
+	
+</body>		
+
+</html>
