@@ -212,5 +212,3 @@ figcaption {
   position: absolute;
   display: inline; }
 
-@media (min-width: 640px) { html {font-size:50%;} } 
-
